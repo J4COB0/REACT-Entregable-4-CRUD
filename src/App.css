@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: #EEEEEE;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* UTILITIES */
+.hide {
+  visibility: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.red {
+  color: #C34A36;
+}
+
+.color-2F4858 {
+  color: #2F4858;
+}
+
+
+
+/* FORM */
+.user-form-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user-form-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  background-color: #EEEEEE;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.user-form-title>h2 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.user-form-info {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: #eeeeee;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.input-container>input {
+  width: 85%;
+  max-width: 670px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.input-container>i {
+  margin-right: 10px;
+}
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-submit>button {
+  width: 90%;
+  max-width: 700px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CC3BD;
+  color: #FFFFFF;
+
+}
+
+
+
+/* LIST */
+.user-list-container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2F4858;
+}
+
+.card-user{
+  width: 80%;
+  max-width: 600px;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.card-user-info>h2 {
+  font-size: 1.2rem;
+  color: #2F4858;
+}
+
+.card-user-info>h3 {
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: normal;
+  margin: 4px 0;
+}
+
+.card-user-info>p {
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: normal;
+}
+
+.card-user-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-user-buttons>button {
+  border: none;
+  margin: 10px;
+  background-color: #FFFFFF;
+}
+
+
+
+/* MEDIA QUERYS */
+@media only screen and (min-width: 768px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
